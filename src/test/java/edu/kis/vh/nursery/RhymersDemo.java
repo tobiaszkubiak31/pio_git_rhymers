@@ -12,7 +12,7 @@ class RhymersDemo {
 		
 		defaultCountingOutRhymer[] rhymers = { factory.GetStandardRhymer(), factory.GetFalseRhymer(),
 				factory.GetFIFORhymer(), factory.GetHanoiRhymer()};
-		
+		//meine wliczanie 1-15 do każdego rhymersa
 		for (int i = 1; i < 15; i++)
 			for (int j = 0; j < 3; j++)
 				rhymers[j].countIn(i);

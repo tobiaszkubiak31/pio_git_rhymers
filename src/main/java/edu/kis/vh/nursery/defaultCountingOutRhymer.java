@@ -10,7 +10,9 @@ public class defaultCountingOutRhymer {
 		if (!isFull())
 			NUMBERS[++total] = in;
 	}
-
+		/*
+		true if data structure is empty
+		 */
 		public boolean callCheck() {
 			return total == -1;
 		}
@@ -18,7 +20,9 @@ public class defaultCountingOutRhymer {
 			public boolean isFull() {
 				return total == 11;
 			}
-		
+				/*
+				return last element of data struccture
+				 */
 				protected int peekaboo() {
 					if (callCheck())
 						return -1;
