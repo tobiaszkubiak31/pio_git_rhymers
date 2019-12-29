@@ -1,6 +1,7 @@
 # Ide files
 target/
 .idea/
+pom.xml
 
 # Compiled class file
 *.class
