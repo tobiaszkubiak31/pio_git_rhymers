@@ -1,27 +1,27 @@
 package edu.kis.vh.nursery;
 
-public class FIFORhymer extends defaultCountingOutRhymer {
+public class FIFORhymer extends DefaultCountingOutRhymer {
 
-    public defaultCountingOutRhymer temp = new defaultCountingOutRhymer();
+    public DefaultCountingOutRhymer temp = new DefaultCountingOutRhymer();
 
     /*
     count out the first element from from stack
      */
     @Override
-    public int countOut() {
+    public int popElement() {
 		/*
 		if heap isnt empty, reverse heap
 		 */
-        while (!callCheck())
-            temp.countIn(super.countOut());
+        while (!isEmpty())
+            temp.pushElement(super.popElement());
 
-        int ret = temp.countOut();
+        int poppedElement = temp.popElement();
 		/*
 		if temp heap isnt empty, reverse heap
 		 */
-        while (!temp.callCheck())
-            countIn(temp.countOut());
+        while (!temp.isEmpty())
+            pushElement(temp.popElement());
 
-        return ret;
+        return poppedElement;
     }
 }
