@@ -4,7 +4,8 @@ public class DefaultCountingOutRhymer {
 
     private int[] NUMBERS = new int[12];
 
-    public int sizePointer = -1;
+
+    private int sizePointer = -1;
 
     public void pushElement(int in) {
         if (!isFull())

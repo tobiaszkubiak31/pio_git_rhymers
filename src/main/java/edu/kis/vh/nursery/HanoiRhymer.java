@@ -1,8 +1,11 @@
 package edu.kis.vh.nursery;
-
+/*
+Wyliczanka przyjmuje zawsze pierwszą liczbe na stos a następnie odrzuca następne liczby
+jeśli są mniejsze badz rowne od ostatinego elementu stosu
+ */
 public class HanoiRhymer extends DefaultCountingOutRhymer {
 
-    int totalRejected = 0;
+    private int totalRejected = 0;
 
     public int reportRejected() {
         return totalRejected;
@@ -11,11 +14,9 @@ public class HanoiRhymer extends DefaultCountingOutRhymer {
     /*
       odrzuc gdy:
      1. w kolejce sie cos wgl znajuje  &&
-     2. liczba na wejsciu jest wieksza od bierzacej
+     2. liczba na wejsciu jest wieksza od bieżacej
      */
     public void pushElement(int number) {
-        //meine
-        System.out.println("last element : " + getLastElement() + " input: " + number);
         if (!isEmpty() && number > getLastElement())
             totalRejected++;
         else
