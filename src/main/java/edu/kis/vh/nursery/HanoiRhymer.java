@@ -16,6 +16,8 @@ public class HanoiRhymer extends DefaultCountingOutRhymer {
      1. w kolejce sie cos wgl znajuje  &&
      2. liczba na wejsciu jest wieksza od bieżacej
      */
+
+    @Override
     public void pushElement(int number) {
         if (!isEmpty() && number > getLastElement())
             totalRejected++;
