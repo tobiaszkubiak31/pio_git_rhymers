@@ -14,6 +14,26 @@ public class RhymersJUnitTest {
         int result = rhymer.getLastElement();
         Assert.assertEquals(testValue, result);
     }
+    @Test
+    public void testPushElementHanoiRhymer() {
+        HanoiRhymer rhymer = new HanoiRhymer();
+        int testValue = 4;
+        rhymer.pushElement(testValue);
+
+        int result = rhymer.getLastElement();
+        Assert.assertEquals(testValue, result);
+
+        int testValue2 = 8;
+        rhymer.pushElement(testValue2);
+
+        int rejected = rhymer.reportRejected();
+        Assert.assertEquals(rejected, 1);
+
+        result = rhymer.getLastElement();
+        Assert.assertEquals(testValue, result);
+
+
+    }
 
     @Test
     public void testCallCheck() {
@@ -74,5 +94,6 @@ public class RhymersJUnitTest {
         result = rhymer.popElement();
         Assert.assertEquals(EMPTY_STACK_VALUE, result);
     }
+
 
 }
