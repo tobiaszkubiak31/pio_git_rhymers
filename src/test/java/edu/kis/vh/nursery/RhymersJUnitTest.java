@@ -4,7 +4,7 @@ import org.junit.Assert;
 import org.junit.Test;
 
 public class RhymersJUnitTest {
-
+    //:todo add test for FIFO Rhymer
     @Test
     public void testPushElement() {
         DefaultCountingOutRhymer rhymer = new DefaultCountingOutRhymer();

@@ -6,6 +6,8 @@ package edu.kis.vh.nursery;
 */
 public class DefaultCountingOutRhymer {
 
+
+    //:todo make dynamic implementation
     private int[] NUMBERS = new int[12];
 
 
