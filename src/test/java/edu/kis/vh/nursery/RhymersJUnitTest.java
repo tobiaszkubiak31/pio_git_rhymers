@@ -6,7 +6,7 @@ import org.junit.Test;
 public class RhymersJUnitTest {
 
     @Test
-    public void testCountIn() {
+    public void testPushElement() {
         DefaultCountingOutRhymer rhymer = new DefaultCountingOutRhymer();
         int testValue = 4;
         rhymer.pushElement(testValue);
@@ -42,7 +42,7 @@ public class RhymersJUnitTest {
     }
 
     @Test
-    public void testPeekaboo() {
+    public void testLastElement() {
         DefaultCountingOutRhymer rhymer = new DefaultCountingOutRhymer();
         final int EMPTY_STACK_VALUE = -1;
 
@@ -59,7 +59,7 @@ public class RhymersJUnitTest {
     }
 
     @Test
-    public void testCountOut() {
+    public void testPopElement() {
         DefaultCountingOutRhymer rhymer = new DefaultCountingOutRhymer();
         final int EMPTY_STACK_VALUE = -1;
 
